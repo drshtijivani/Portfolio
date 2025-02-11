@@ -37,21 +37,16 @@ cancelBtn.onclick = function() {
   scrollBtn.style.pointerEvents = "auto";
 }
 function downloadResume() {
-  // Replace 'resume.pdf' with the actual file name of your resume
   var filename = 'DJ_CV.pdf';
-  // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
-  var fileURL = 'C:/Users/DRASHTI/Downloads/DJ_CV.pdf';
-  
-  // Create a temporary anchor element
+  var fileURL = 'https://drive.google.com/file/d/1Ma354IDZ1orw-8pqMg3-zWyIENd7eN_n/view?usp=drive_link'; // Replace with your actual public URL
+
   var a = document.createElement('a');
   a.href = fileURL;
   a.download = filename;
 
-  // Append the anchor to the body and trigger the click event
   document.body.appendChild(a);
   a.click();
 
-  // Cleanup
   document.body.removeChild(a);
 }
 // Side Navigation Bar Close While We click On Navigation Links
